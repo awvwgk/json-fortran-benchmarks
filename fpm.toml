@@ -1,0 +1,21 @@
+name = "json-fortran-benchmarks"
+version = "0.1.0"
+license = "BSD-3"
+author = "Jacob Williams"
+maintainer = "Jacob Williams"
+copyright = "Copyright 2021, Jacob Williams"
+
+[dependencies]
+rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "v0.1.0" }
+json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "8.2.5" }
+
+
+[[example]]
+name="json_fortran_test"
+source-dir="app"
+main="json_fortran_test.f90"
+
+[[example]]
+name="rojff_test"
+source-dir="app"
+main="rojff_test.f90"
