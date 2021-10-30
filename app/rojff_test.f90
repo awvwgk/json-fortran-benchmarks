@@ -1,4 +1,4 @@
-program example
+program rojff_test
 
     use rojff
 
@@ -14,4 +14,4 @@ program example
 
     print *, 'rojff : ', (finish-start)/real(count_rate), ' seconds'
 
-end program example
+end program rojff_test
