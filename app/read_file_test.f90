@@ -2,6 +2,7 @@
 
 
 program read_file_test
+    use iso_fortran_env, only: int64,real64
 
     !! Reads the contents of the file into an allocatable string str.
 
@@ -13,7 +14,7 @@ program read_file_test
 
     integer :: iunit,istat,filesize
 
-    integer :: start, finish, count_rate
+    integer(int64) :: start, finish, count_rate
 
     call system_clock(start, count_rate)
 
@@ -36,6 +37,6 @@ program read_file_test
 
     call system_clock(finish)
 
-    write(*,'(A30,1X,F7.4,1X,A)') 'read file to a string : ', (finish-start)/real(count_rate), ' seconds'
+    write(*,'(A30,1X,F7.4,1X,A)') 'read file to a string : ', (finish-start)/real(count_rate,real64), ' seconds'
 
 end program read_file_test

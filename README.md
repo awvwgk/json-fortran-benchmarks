@@ -21,13 +21,13 @@ python ujson_test.py
 
 Just the time to read the entire file into a `character(len=:),allocatable` string:
 ```
- read file to a string :   0.0010  seconds
+ read file to a string :   0.0003  seconds
 ```
 
 To parse the `canada.json` file:
 ```
- rojff                 :   0.6869  seconds
- json_fortran          :   0.2109  seconds
- json                  :   0.0391  seconds
- ujson                 :   0.0248  seconds
+ rojff        : 0.6642  seconds
+ json_fortran : 0.1925  seconds
+ json         : 0.0326  seconds
+ ujson        : 0.0205  seconds
 ```
