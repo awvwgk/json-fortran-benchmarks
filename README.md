@@ -19,7 +19,7 @@ python ujson_test.py
 
 ## Sample results:
 
-Just the time to read the entire fine into a `character(len=:),allocatable` string:
+Just the time to read the entire file into a `character(len=:),allocatable` string:
 ```
  read file to a string :   0.0010  seconds
 ```
