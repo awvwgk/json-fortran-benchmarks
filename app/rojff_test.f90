@@ -14,4 +14,6 @@ program rojff_test
 
     write(*,'(A30,1X,F7.4,1X,A)') 'rojff : ', (finish-start)/real(count_rate), ' seconds'
 
+    if (parsed_json%failed()) error stop 'error parsing JSON file'
+
 end program rojff_test
