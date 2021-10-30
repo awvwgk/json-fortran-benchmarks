@@ -13,6 +13,7 @@ fpm build --profile Release
 fpm run rojff_test         
 fpm run json_fortran_test
 fpm run read_file_test
+fpm run fson_test
 python json_test.py
 python ujson_test.py
 ```
@@ -26,8 +27,12 @@ Just the time to read the entire file into a `character(len=:),allocatable` stri
 
 To parse the `canada.json` file:
 ```
+ fson         : 1.0223  seconds
  rojff        : 0.6642  seconds
  json_fortran : 0.1925  seconds
  json         : 0.0326  seconds
  ujson        : 0.0205  seconds
 ```
+
+## See also
+ * [JSON](https://degenerateconic.com/json.html) [degenerateconic.com]
