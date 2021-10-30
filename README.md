@@ -20,19 +20,26 @@ python ujson_test.py
 
 ## Sample results:
 
-Just the time to read the entire file into a `character(len=:),allocatable` string:
+To parse the `canada.json` file:
+
+First, just the time to read the entire file into a `character(len=:),allocatable` string:
 ```
  read file to a string :   0.0003  seconds
 ```
 
-To parse the `canada.json` file:
+### Fortran libs
 ```
  fson         : 1.0223  seconds
  rojff        : 0.6642  seconds
  json_fortran : 0.1925  seconds
+```
+
+### Python libs
+```
  json         : 0.0326  seconds
  ujson        : 0.0205  seconds
 ```
+
 
 ## See also
  * [JSON](https://degenerateconic.com/json.html) [degenerateconic.com]
