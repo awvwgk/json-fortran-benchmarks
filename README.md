@@ -14,8 +14,10 @@ fpm run rojff_test
 fpm run json_fortran_test
 fpm run read_file_test
 fpm run fson_test
+
 python json_test.py
 python ujson_test.py
+python rapidjson_test.py
 ```
 
 ## Sample results:
@@ -36,6 +38,7 @@ First, just the time to read the entire file into a `character(len=:),allocatabl
 
 ### Python libs
 ```
+ rapidjson    : 0.0442  seconds
  json         : 0.0326  seconds
  ujson        : 0.0205  seconds
 ```
