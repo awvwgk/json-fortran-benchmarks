@@ -13,4 +13,6 @@ program json_fortran_test
 
     write(*,'(A30,1X,F7.4,1X,A)') 'json_fortran : ', (finish-start)/real(count_rate), ' seconds'
 
+    if (f%failed()) error stop 'error parsing JSON file'
+
 end program json_fortran_test
