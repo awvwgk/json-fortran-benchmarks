@@ -19,3 +19,8 @@ main="json_fortran_test.f90"
 name="rojff_test"
 source-dir="app"
 main="rojff_test.f90"
+
+[[example]]
+name="read_file_test"
+source-dir="app"
+main="read_file_test.f90"

@@ -11,6 +11,6 @@ program json_fortran_test
     call f%load('canada.json')  
     call system_clock(finish)
 
-    write(*,*) 'json_fortran : ', (finish-start)/real(count_rate), ' seconds'
+    write(*,'(A30,1X,F7.4,1X,A)') 'json_fortran : ', (finish-start)/real(count_rate), ' seconds'
 
 end program json_fortran_test

@@ -12,6 +12,6 @@ program rojff_test
     parsed_json = parse_json_from_file('canada.json')
     call system_clock(finish)
 
-    print *, 'rojff : ', (finish-start)/real(count_rate), ' seconds'
+    write(*,'(A30,1X,F7.4,1X,A)') 'rojff : ', (finish-start)/real(count_rate), ' seconds'
 
 end program rojff_test
