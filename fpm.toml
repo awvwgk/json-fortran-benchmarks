@@ -7,7 +7,7 @@ copyright = "Copyright 2021, Jacob Williams"
 
 [dependencies]
 rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "f1f20028d7495589980d35101afdf05774cad90d" }
-json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "8.2.5" }
+json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "3b54a73210c6e5dedb28a9ebccb5dcc33cb2b9a1" }
 jsonff = {git = "https://gitlab.com/everythingfunctional/jsonff.git", tag = "v3.1.1"}
 
 

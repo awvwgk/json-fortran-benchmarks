@@ -31,9 +31,9 @@ First, just the time to read the entire file into a `character(len=:),allocatabl
 
 ### Fortran libs
 ```
- fson         : 1.0223  seconds
- rojff        : 0.6642  seconds
- json_fortran : 0.1925  seconds
+ fson         : 1.0160  seconds
+ rojff        : 0.3667  seconds
+ json_fortran : 0.1161  seconds
 ```
 
 ### Python libs
