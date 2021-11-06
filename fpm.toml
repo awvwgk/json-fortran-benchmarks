@@ -6,8 +6,9 @@ maintainer = "Jacob Williams"
 copyright = "Copyright 2021, Jacob Williams"
 
 [dependencies]
-rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "v0.1.0" }
+rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "f1f20028d7495589980d35101afdf05774cad90d" }
 json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "8.2.5" }
+jsonff = {git = "https://gitlab.com/everythingfunctional/jsonff.git", tag = "v3.1.1"}
 
 
 [[example]]
@@ -24,3 +25,8 @@ main="rojff_test.f90"
 name="read_file_test"
 source-dir="app"
 main="read_file_test.f90"
+
+[[example]]
+name="jsonff_test"
+source-dir="app"
+main="jsonff_test.f90"
