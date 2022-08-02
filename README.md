@@ -23,6 +23,8 @@ python rapidjson_test.py
 
 ## Sample results:
 
+The benchmarks were run on an M1 MacBook Pro.
+
 To parse the `canada.json` file:
 
 First, just the time to read the entire file into a `character(len=:),allocatable` string:
@@ -32,10 +34,10 @@ First, just the time to read the entire file into a `character(len=:),allocatabl
 
 ### Fortran libs
 ```
-               json_fortran :   0.1154  seconds
-                      rojff :   0.2359  seconds
-                      tomlf :   0.4717  seconds
-                       fson :   0.8649  seconds
+               json_fortran :   0.1162  seconds
+                      tomlf :   0.1352  seconds
+                      rojff :   0.2367  seconds
+                       fson :   0.8735  seconds
 ```
 
 ### Python libs
