@@ -7,6 +7,8 @@ program json_fortran_test
 
     type(json_file) :: f
     integer(int64) :: start, finish, count_rate
+    logical :: status_ok
+    character(len=:),allocatable :: error_msg
 
     call system_clock(start, count_rate)
     call f%load('canada.json')  
@@ -14,6 +16,10 @@ program json_fortran_test
 
     write(*,'(A30,1X,F7.4,1X,A)') 'json_fortran : ', (finish-start)/real(count_rate,real64), ' seconds'
 
-    if (f%failed()) error stop 'error parsing JSON file'
+    if (f%failed()) then
+        call f%check_for_errors(status_ok=status_ok, error_msg=error_msg)
+        write(*,*) error_msg
+        error stop 'error parsing JSON file'
+    end if
 
 end program json_fortran_test

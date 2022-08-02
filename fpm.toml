@@ -7,26 +7,18 @@ copyright = "Copyright 2021, Jacob Williams"
 
 [dependencies]
 rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "f1f20028d7495589980d35101afdf05774cad90d" }
-json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "3b54a73210c6e5dedb28a9ebccb5dcc33cb2b9a1" }
+json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "8.3.0" }
 jsonff = {git = "https://gitlab.com/everythingfunctional/jsonff.git", tag = "v3.1.1"}
+toml-f = {git = "https://github.com/toml-f/toml-f.git", tag = "v0.3.0"}
+
+[build]
+auto-executables = true
+auto-examples = true
+auto-tests = true
 
 
-[[example]]
-name="json_fortran_test"
-source-dir="app"
-main="json_fortran_test.f90"
+[library]
+source-dir = "src"
 
-[[example]]
-name="rojff_test"
-source-dir="app"
-main="rojff_test.f90"
-
-[[example]]
-name="read_file_test"
-source-dir="app"
-main="read_file_test.f90"
-
-[[example]]
-name="jsonff_test"
-source-dir="app"
-main="jsonff_test.f90"
+[install]
+library = true
