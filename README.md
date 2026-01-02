@@ -13,7 +13,8 @@ fpm build --profile release
 fpm run --profile release read_file_test
 fpm run --profile release fson_test
 fpm run --profile release tomlf_test
-fpm run --profile release rojff_test         
+fpm run --profile release jonquil_test 
+fpm run --profile release rojff_test        
 fpm run --profile release json_fortran_test
 
 python json_test.py
@@ -29,22 +30,23 @@ To parse the `canada.json` file:
 
 First, just the time to read the entire file into a `character(len=:),allocatable` string:
 ```
-      read file to a string :   0.0004  seconds
+      read file to a string :   0.0003  seconds
 ```
 
 ### Fortran libs
 ```
-               json_fortran :   0.1162  seconds
-                      tomlf :   0.1352  seconds
-                      rojff :   0.2367  seconds
-                       fson :   0.8735  seconds
+               json_fortran :   0.0966  seconds
+                      tomlf :   0.1089  seconds
+                      rojff :   0.2755  seconds
+                    jonquil :   0.4203  seconds
+                       fson :   0.9739  seconds
 ```
 
 ### Python libs
 ```
-json      : 0.022102208 seconds
-ujson     : 0.011403209 seconds
-rapidjson : 0.032243625 seconds
+json      : 0.038878583 seconds
+rapidjson : 0.048005750 seconds
+ujson     : 0.016822333 seconds
 ```
 
 ## See also

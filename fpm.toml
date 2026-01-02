@@ -9,6 +9,7 @@ copyright = "Copyright 2021, Jacob Williams"
 rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "v2.0.1" }
 json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "9.0.5" }
 toml-f = {git = "https://github.com/toml-f/toml-f.git", tag = "v0.4.3"}
+jonquil = {git = "https://github.com/toml-f/jonquil.git", tag = "v0.3.0"}
 
 [build]
 auto-executables = true
