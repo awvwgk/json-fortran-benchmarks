@@ -6,9 +6,9 @@ maintainer = "Jacob Williams"
 copyright = "Copyright 2021, Jacob Williams"
 
 [dependencies]
-rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "v0.1.3" }
-json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "8.3.0" }
-toml-f = {git = "https://github.com/toml-f/toml-f.git", tag = "v0.3.0"}
+rojff = { git = "https://gitlab.com/everythingfunctional/rojff.git", tag = "v2.0.1" }
+json-fortran = { git = "https://github.com/jacobwilliams/json-fortran.git", tag = "9.0.5" }
+toml-f = {git = "https://github.com/toml-f/toml-f.git", tag = "v0.4.3"}
 
 [build]
 auto-executables = true

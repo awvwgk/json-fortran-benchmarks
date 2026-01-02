@@ -33,7 +33,7 @@ module fson_string_m
 
     private
 
-    public :: fson_string, fson_string_create, fson_string_destroy, fson_string_length, fson_string_append, fson_string_clear 
+    public :: fson_string, fson_string_create, fson_string_destroy, fson_string_length, fson_string_append !, fson_string_clear 
     public :: fson_string_equals, fson_string_copy
 
     integer, parameter :: BLOCK_SIZE = 32
@@ -123,7 +123,7 @@ contains
     !
     subroutine append_string(str1, str2)
         type(fson_string), pointer :: str1, str2
-        integer length, i
+        integer :: length, i
 
         length = string_length(str2)
 
@@ -177,7 +177,7 @@ contains
     subroutine copy_chars(this, to)
         type(fson_string), pointer :: this
         character(len = *), intent(inout) :: to
-        integer :: length
+        integer :: i, length
 
         length = min(string_length(this), len(to))
 

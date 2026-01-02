@@ -10,11 +10,11 @@ fpm build --profile release
 ## To run tests
 
 ```
-fpm run read_file_test
-fpm run fson_test
-fpm run tomlf_test
-fpm run rojff_test         
-fpm run json_fortran_test
+fpm run --profile release read_file_test
+fpm run --profile release fson_test
+fpm run --profile release tomlf_test
+fpm run --profile release rojff_test         
+fpm run --profile release json_fortran_test
 
 python json_test.py
 python ujson_test.py
