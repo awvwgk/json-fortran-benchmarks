@@ -10,11 +10,19 @@ program json_fortran_test
     logical :: status_ok
     character(len=:),allocatable :: error_msg
 
+    call f%initialize(string_to_real_mode=1)  ! use fortran routines for string to real conversion
     call system_clock(start, count_rate)
     call f%load('canada.json')  
     call system_clock(finish)
-
     write(*,'(A30,1X,F7.4,1X,A)') 'json_fortran : ', (finish-start)/real(count_rate,real64), ' seconds'
+    call f%destroy()
+
+    call f%initialize(string_to_real_mode=2)  ! use c routines for string to real conversion
+    call system_clock(start, count_rate)
+    call f%load('canada.json')  
+    call system_clock(finish)
+    write(*,'(A30,1X,F7.4,1X,A)') 'json_fortran C: ', (finish-start)/real(count_rate,real64), ' seconds'
+    call f%destroy()
 
     if (f%failed()) then
         call f%check_for_errors(status_ok=status_ok, error_msg=error_msg)

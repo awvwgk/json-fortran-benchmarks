@@ -32,13 +32,16 @@ First, just the time to read the entire file into a `character(len=:),allocatabl
 
 ### Fortran libs
 ```
-               json_fortran :   0.0813  seconds
-                      tomlf :   0.1085  seconds
-                      jsonf :   0.2074  seconds
-                      rojff :   0.3028  seconds
+              json_fortran C:   0.0447  seconds
+               json_fortran :   0.0826  seconds
+                      tomlf :   0.1079  seconds
+                      jsonf :   0.2109  seconds
+                      rojff :   0.2829  seconds
                     jonquil :   0.4208  seconds
-                       fson :   0.9588  seconds
+                       fson :   0.9652  seconds
 ```
+
+Note that `json_fortran C` is just json-fortran but using the `string_to_real_mode=2` option, which uses the string to real functions from the C stdlib.
 
 ### Python libs
 ```
