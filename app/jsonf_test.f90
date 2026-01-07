@@ -11,6 +11,6 @@ program jsonf_test
     call json%read_file('canada.json')
 
     call system_clock(finish)
-    write(*,'(A30,1X,F7.4,1X,A)') 'jsonf test : ', (finish-start)/real(count_rate,real64), ' seconds'
+    write(*,'(A30,1X,F7.4,1X,A)') 'jsonf : ', (finish-start)/real(count_rate,real64), ' seconds'
 
 end program jsonf_test

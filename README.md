@@ -10,13 +10,10 @@ fpm build --profile release
 ## To run tests
 
 ```
-fpm run --profile release read_file_test
-fpm run --profile release fson_test
-fpm run --profile release tomlf_test
-fpm run --profile release jonquil_test 
-fpm run --profile release rojff_test        
-fpm run --profile release json_fortran_test
+# fun all the fortran tests:
+fpm run --profile release 
 
+# run the python tests:
 python json_test.py
 python ujson_test.py
 python rapidjson_test.py
@@ -37,7 +34,7 @@ First, just the time to read the entire file into a `character(len=:),allocatabl
 ```
                json_fortran :   0.0813  seconds
                       tomlf :   0.1085  seconds
-                 jsonf test :   0.2074  seconds
+                      jsonf :   0.2074  seconds
                       rojff :   0.3028  seconds
                     jonquil :   0.4208  seconds
                        fson :   0.9588  seconds
